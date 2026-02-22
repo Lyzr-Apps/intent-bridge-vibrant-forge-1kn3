@@ -618,7 +618,7 @@ export default function Page() {
   // Active agent tracking
   const [activeAgentId, setActiveAgentId] = useState<string | null>(null)
 
-  // ---- MindMatch State ----
+  // ---- AIMatch State ----
   const [matchForm, setMatchForm] = useState({ name: '', bio: '', preferences: '', intent: '' })
   const [matchLoading, setMatchLoading] = useState(false)
   const [matchError, setMatchError] = useState<string | null>(null)
@@ -766,15 +766,15 @@ export default function Page() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
                 <FiZap className="w-5 h-5 text-white" />
               </div>
-              <span className="font-bold text-lg tracking-tight text-foreground hidden sm:block">MindMatch Intelligence Hub</span>
-              <span className="font-bold text-lg tracking-tight text-foreground sm:hidden">MindMatch</span>
+              <span className="font-bold text-lg tracking-tight text-foreground hidden sm:block">AIMatch Intelligence Hub</span>
+              <span className="font-bold text-lg tracking-tight text-foreground sm:hidden">AIMatch</span>
             </div>
 
             {/* Tab Selectors */}
             <div className="flex items-center gap-1 bg-secondary rounded-xl p-1">
               <button onClick={() => setActiveTab('match')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === 'match' ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
                 <FiUsers className="w-4 h-4" />
-                <span className="hidden sm:inline">MindMatch</span>
+                <span className="hidden sm:inline">AIMatch</span>
               </button>
               <button onClick={() => setActiveTab('research')} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === 'research' ? 'bg-card text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}>
                 <FiBookOpen className="w-4 h-4" />
