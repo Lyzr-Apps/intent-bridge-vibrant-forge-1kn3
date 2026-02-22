@@ -1,0 +1,54 @@
+{
+  "agent_name": "Dataset Discovery Agent",
+  "agent_id": "699ada9932558c5716f1d41f",
+  "description": "Searches academic repositories and the web to identify, curate, and summarize relevant datasets for research topics; returns relevance scores, contextual summaries, and actionable next steps",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "datasets": [
+      {
+        "title": "string",
+        "source": "string",
+        "source_type": "string",
+        "relevance_score": "number",
+        "contextual_summary": "string",
+        "methodology_notes": "string",
+        "access_link": "string",
+        "next_steps": ["string"],
+        "year": "string",
+        "authors": ["string"]
+      }
+    ],
+    "research_landscape_summary": "string",
+    "total_results": "number",
+    "search_metadata": {
+      "query_used": "string",
+      "sources_searched": ["string"],
+      "filters_applied": "string"
+    }
+  },
+  "example_response": {
+    "datasets": [
+      {
+        "title": "sample string",
+        "source": "sample string",
+        "source_type": "sample string",
+        "relevance_score": 0,
+        "contextual_summary": "sample string",
+        "methodology_notes": "sample string",
+        "access_link": "sample string",
+        "next_steps": ["sample string"],
+        "year": "sample string",
+        "authors": ["sample string"]
+      }
+    ],
+    "research_landscape_summary": "sample string",
+    "total_results": 0,
+    "search_metadata": {
+      "query_used": "sample string",
+      "sources_searched": ["sample string"],
+      "filters_applied": "sample string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "agent_name": "Intent Analyzer Agent",
+  "agent_id": "699ada6221096e9c61f06e16",
+  "description": "Extracts deep context, preferences, goals, and latent intent from user profile/query to create a rich matching context vector",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "personality_traits": [
+      {
+        "trait": "string",
+        "confidence": "number"
+      }
+    ],
+    "core_values": ["string"],
+    "goals": ["string"],
+    "interests": ["string"],
+    "communication_style": "string",
+    "deal_breakers": ["string"],
+    "ideal_match_profile": "string",
+    "matching_intent_summary": "string",
+    "overall_confidence": "number"
+  },
+  "example_response": {
+    "personality_traits": [
+      {
+        "trait": "sample string",
+        "confidence": 0
+      }
+    ],
+    "core_values": ["sample string"],
+    "goals": ["sample string"],
+    "interests": ["sample string"],
+    "communication_style": "sample string",
+    "deal_breakers": ["sample string"],
+    "ideal_match_profile": "sample string",
+    "matching_intent_summary": "sample string",
+    "overall_confidence": 0
+  }
+}

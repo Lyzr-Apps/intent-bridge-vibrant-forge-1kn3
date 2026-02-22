@@ -1,0 +1,42 @@
+{
+  "agent_name": "Match Orchestrator Manager",
+  "agent_id": "699ada8321096e9c61f06e1a",
+  "description": "Coordinates intent analysis and compatibility matching sub-agents; aggregates results into explained, scored match recommendations with actionable next steps",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "matches": [
+      {
+        "name": "string",
+        "title_or_role": "string",
+        "compatibility_score": "number",
+        "reasoning": "string",
+        "contextual_summary": "string",
+        "shared_interests": ["string"],
+        "next_steps": ["string"],
+        "confidence_level": "string"
+      }
+    ],
+    "intent_summary": "string",
+    "overall_analysis": "string",
+    "total_matches": "number"
+  },
+  "example_response": {
+    "matches": [
+      {
+        "name": "sample string",
+        "title_or_role": "sample string",
+        "compatibility_score": 0,
+        "reasoning": "sample string",
+        "contextual_summary": "sample string",
+        "shared_interests": ["sample string"],
+        "next_steps": ["sample string"],
+        "confidence_level": "sample string"
+      }
+    ],
+    "intent_summary": "sample string",
+    "overall_analysis": "sample string",
+    "total_matches": 0
+  }
+}

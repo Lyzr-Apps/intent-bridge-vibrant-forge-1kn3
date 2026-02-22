@@ -1,0 +1,51 @@
+{
+  "nodes": [
+    {"id": "input_node", "type": "Input", "label": "User Input", "nodeCategory": "input"},
+    {"id": "match_orchestrator", "type": "Agent", "label": "Match Orchestrator Manager", "nodeCategory": "agent"},
+    {"id": "intent_analyzer", "type": "Agent", "label": "Intent Analyzer Agent", "nodeCategory": "agent"},
+    {"id": "compatibility_matcher", "type": "Agent", "label": "Compatibility Matcher Agent", "nodeCategory": "agent"},
+    {"id": "dataset_discovery", "type": "Agent", "label": "Dataset Discovery Agent", "nodeCategory": "agent"},
+    {"id": "output_node", "type": "Output", "label": "Results Output", "nodeCategory": "end"}
+  ],
+  "edges": [
+    {"source": "input_node", "target": "match_orchestrator"},
+    {"source": "input_node", "target": "dataset_discovery"},
+    {"source": "match_orchestrator", "target": "intent_analyzer"},
+    {"source": "match_orchestrator", "target": "compatibility_matcher"},
+    {"source": "intent_analyzer", "target": "output_node"},
+    {"source": "compatibility_matcher", "target": "output_node"},
+    {"source": "dataset_discovery", "target": "output_node"}
+  ],
+  "agents": {
+    "match_orchestrator": {
+      "agent_id": "699ada8321096e9c61f06e1a",
+      "name": "Match Orchestrator Manager",
+      "type": "manager",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "managed_agents": ["699ada6221096e9c61f06e16", "699ada6281cd1b955343e301"]
+    },
+    "intent_analyzer": {
+      "agent_id": "699ada6221096e9c61f06e16",
+      "name": "Intent Analyzer Agent",
+      "type": "sub-agent",
+      "provider": "openai",
+      "model": "gpt-4.1"
+    },
+    "compatibility_matcher": {
+      "agent_id": "699ada6281cd1b955343e301",
+      "name": "Compatibility Matcher Agent",
+      "type": "sub-agent",
+      "provider": "perplexity",
+      "model": "sonar-pro"
+    },
+    "dataset_discovery": {
+      "agent_id": "699ada9932558c5716f1d41f",
+      "name": "Dataset Discovery Agent",
+      "type": "independent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "tools": ["ARXIV__SEARCH_PAPERS", "ARXIV__GET_PAPER_METADATA"]
+    }
+  }
+}

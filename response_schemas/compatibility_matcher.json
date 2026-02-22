@@ -1,0 +1,38 @@
+{
+  "agent_name": "Compatibility Matcher Agent",
+  "agent_id": "699ada6281cd1b955343e301",
+  "description": "Searches for and scores compatible profiles/entities using contextual intelligence; provides match reasoning and confidence scores",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "matches": [
+      {
+        "name": "string",
+        "title_or_role": "string",
+        "compatibility_score": "number",
+        "reasoning": "string",
+        "contextual_summary": "string",
+        "shared_interests": ["string"],
+        "next_steps": ["string"]
+      }
+    ],
+    "total_matches_found": "number",
+    "search_summary": "string"
+  },
+  "example_response": {
+    "matches": [
+      {
+        "name": "sample string",
+        "title_or_role": "sample string",
+        "compatibility_score": 0,
+        "reasoning": "sample string",
+        "contextual_summary": "sample string",
+        "shared_interests": ["sample string"],
+        "next_steps": ["sample string"]
+      }
+    ],
+    "total_matches_found": 0,
+    "search_summary": "sample string"
+  }
+}
